@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -18,10 +18,7 @@ public interface IntegerFunction{
 
     @Test
     public void test_LambdaSyntax() {
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
+        List<Integer> numbers = Arrays.asList(1,2,3);
         Consumer<Integer> integerConsumer = System.out::println;
         numbers.forEach(integerConsumer);
     }

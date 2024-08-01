@@ -3,18 +3,17 @@ public class Palindrome {
 	public static void main(String[] args) {
 		Palindrome p = new Palindrome();
 		boolean res = p.isPalindrome("race car");
-		System.out.println("Result: "+res);
+		System.out.println("Is word a Palindrome? Result: "+res);
 	}	
 	public boolean isPalindrome(String s) {
-		
-		String cleaned_string = "";
+		StringBuilder cleaned_string = new StringBuilder();
 		for(char c : s.toCharArray()) {
 			if(Character.isLetter(c) || Character.isDigit(c)) {
-				cleaned_string += c;
+				cleaned_string.append(c);
 			}
 		}	
-			cleaned_string = cleaned_string.toLowerCase();
-			System.out.println("Cleaned String: "+cleaned_string);
+			cleaned_string = new StringBuilder(cleaned_string.toString().toLowerCase());
+			System.out.println("Word To Check: "+cleaned_string);
 			int left_pointer = 0;
 			int right_pointer = cleaned_string.length()-1;
 			

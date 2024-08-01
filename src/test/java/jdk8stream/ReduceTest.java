@@ -32,7 +32,7 @@ public class ReduceTest {
     @Test
     public void test_ReduceCustomObjects() {
         List<Person> personList = SearchListOfObjects.createListOfObjects();
-        Integer result = personList.stream().reduce(0, (partialAgeResul, person) -> partialAgeResul + person.getAge(), Integer::sum);
+        Integer result = personList.stream().reduce(0, (partialAgeResult, person) -> partialAgeResult + person.getAge(), Integer::sum);
         assert (result > 150);
     }
 
