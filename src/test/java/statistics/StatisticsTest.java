@@ -10,8 +10,8 @@ import java.util.Arrays;
 @RunWith(JUnit4.class)
 public class StatisticsTest {
 
-    private final int[] evenLengthArray = {1,5,3,8,45,9};//1,3,5,8,9,45
-    private final int[] oddLengthArray = {1,45,3,8,2,99,2};//1,2,2,3,8,45,99
+    private final int[] evenLengthArray = {1,5,3,8,45,9};//sorted = 1,3,5,8,9,45
+    private final int[] oddLengthArray = {1,45,3,8,2,99,2};//sorted = 1,2,2,3,8,45,99
 
     @Test
     public void test_Median(){
