@@ -34,8 +34,4 @@ public class StatisticsTest {
         }
         return median;
     }
-
-
-
-
 }
