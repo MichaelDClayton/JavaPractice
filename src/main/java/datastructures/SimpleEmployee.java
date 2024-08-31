@@ -1,12 +1,12 @@
 package datastructures;
 
-public class Employee {
+public class SimpleEmployee {
 
     private String firstName;
     private String lastName;
     private int id;
 
-    public Employee(String firstName, String lastName, int id) {
+    public SimpleEmployee(String firstName, String lastName, int id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
@@ -41,7 +41,7 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Employee employee = (Employee) o;
+        SimpleEmployee employee = (SimpleEmployee) o;
 
         if (id != employee.id) return false;
         if (!firstName.equals(employee.firstName)) return false;

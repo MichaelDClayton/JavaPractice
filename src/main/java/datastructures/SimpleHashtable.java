@@ -8,7 +8,7 @@ public class SimpleHashtable {
         hashtable = new StoredEmployee[10];
     }
 
-    public void put(String key, Employee employee) {
+    public void put(String key, SimpleEmployee employee) {
         int hashedKey = hashKey(key);
         if (occupied(hashedKey)) {
             int stopIndex = hashedKey;
@@ -32,7 +32,7 @@ public class SimpleHashtable {
         }
     }
 
-    public Employee get(String key) {
+    public SimpleEmployee get(String key) {
         int hashedKey = findKey(key);
         if (hashedKey == -1) {
             return null;

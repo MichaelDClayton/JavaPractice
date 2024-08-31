@@ -28,10 +28,9 @@ public class BuildHierarchyTree {
 	
 	 //Build tree, Recursion, Time O(n), Space O(h), n is number of employees, h is levels of hierarchy tree
 	 public void buildHierarchyTree(Employee root) {
-		 Employee employee = root;
-		 List<Employee> subs = getSubsById(employee.id);
-		 employee.subordinates = subs;
-		 if (subs.size() == 0)
+         List<Employee> subs = getSubsById(root.id);
+		 root.subordinates = subs;
+		 if (subs.isEmpty())
 			 return;
 		 for (Employee em : subs) 
 	    	buildHierarchyTree(em);

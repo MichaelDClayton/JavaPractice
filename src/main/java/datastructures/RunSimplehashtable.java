@@ -3,12 +3,12 @@ package datastructures;
 public class RunSimplehashtable {
 
     public static void main(String[] args) {
-        datastructures.Employee janeJones = new datastructures.Employee("Jane", "Jones", 123);
-        Employee johnDoe = new Employee("John", "Doe", 4567);
-        Employee marySmith = new Employee("Mary", "Smith", 22);
-        Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
-        Employee billEnd = new Employee("Bill", "End", 78);
-        Employee janeJones2 = new Employee("Jane2", "Jones2", 123);
+        SimpleEmployee janeJones = new SimpleEmployee("Jane", "Jones", 123);
+        SimpleEmployee johnDoe = new SimpleEmployee("John", "Doe", 4567);
+        SimpleEmployee marySmith = new SimpleEmployee("Mary", "Smith", 22);
+        SimpleEmployee mikeWilson = new SimpleEmployee("Mike", "Wilson", 3245);
+        SimpleEmployee billEnd = new SimpleEmployee("Bill", "End", 78);
+        SimpleEmployee janeJones2 = new SimpleEmployee("Jane2", "Jones2", 123);
 
         datastructures.SimpleHashtable ht = new SimpleHashtable();
         ht.put("Jones", janeJones);
