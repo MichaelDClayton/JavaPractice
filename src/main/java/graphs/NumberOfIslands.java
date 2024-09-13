@@ -1,4 +1,5 @@
 package graphs;
+
 public class NumberOfIslands {
     //function that find the number of islands
     public int findIslands(char[][] matrix) {
@@ -29,7 +30,7 @@ public class NumberOfIslands {
     public void dfs(char[][] matrix, int row, int col) {
         int H = matrix.length;
         int L = matrix[0].length;
-        System.out.println("matrix"+"["+row+"]["+col+"]");
+        System.out.println("matrix" + "[" + row + "][" + col + "]");
 //returns true if any of the condition returns true
         if (row < 0 || col < 0 || row >= H || col >= L || matrix[row][col] != '1')
             return;
@@ -56,7 +57,7 @@ public class NumberOfIslands {
                         {'1', '1', '0', '0', '0'},
                         {'0', '0', '1', '0', '0'},
                         {'0', '0', '0', '1', '1'}};
-//prints the result
+        //prints the result
         System.out.println("Number of Islands: " + noi.findIslands(islandGrid));
     }
 }

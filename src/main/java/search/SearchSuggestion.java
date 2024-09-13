@@ -8,13 +8,20 @@ import java.util.List;
 public class SearchSuggestion {
 
     public static void main(String[] args) {
+        final long startTime = System.currentTimeMillis();
         String[] products = {"mouse", "monitor", "movie", "mouthwash", "mountain", "mount"};
-        /*List<String> searchResults = suggestedProducts(products, "m");
-        System.out.println("results: "+searchResults);*/
 
-        List<String> searchResultsNew = suggestedProductsNew(products, "mount");
-        System.out.println("results: "+searchResultsNew);
+        for(int i =0;i<3;i++){
+            //List<String> searchResults = suggestedProducts(products, "m");
 
+            List<String> searchResultsNew = suggestedProductsNew(products, "mount");
+         /*
+             System.out.println("results: "+searchResultsNew);
+        */
+        }
+
+        final long elapsedTimeMillis = System.currentTimeMillis() - startTime;
+        System.out.println("elapsedTimeMillis: "+elapsedTimeMillis);
     }
 
     public static List<String> suggestedProducts(String[] products, String searchWord) {

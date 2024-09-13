@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 
 @RunWith(JUnit4.class)
 public class StatisticsTest {
@@ -34,4 +35,14 @@ public class StatisticsTest {
         }
         return median;
     }
+    @Test
+    public void test_using_SummaryStatistics(){
+        int[] nums = {5,5};
+        IntSummaryStatistics summary = Arrays.stream(nums).summaryStatistics();
+        double average = summary.getAverage();
+        int avg = (int) average;
+        Assert.assertEquals(5, avg);
+    }
+
+
 }
