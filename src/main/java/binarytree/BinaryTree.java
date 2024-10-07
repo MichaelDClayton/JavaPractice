@@ -7,7 +7,20 @@ public class BinaryTree {
 	public BinaryTree() {
 		
 	}
-	
+
+	public Node findNode(int data){
+		Node nodeToSearchFor = root;
+		while(nodeToSearchFor.val != data){
+			if(data < nodeToSearchFor.val){
+				nodeToSearchFor = nodeToSearchFor.leftChild;
+			}else{
+				nodeToSearchFor = nodeToSearchFor.rightChild;
+			}
+		}
+
+        return nodeToSearchFor;
+	}
+
 	public int getTreeHeight(binarytree.Node root) {
 		if(root == null)
 			return -1;

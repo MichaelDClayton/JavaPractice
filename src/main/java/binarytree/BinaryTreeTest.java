@@ -13,7 +13,12 @@ public class BinaryTreeTest {
 		tree.addNode(23);
 		tree.addNode(30);
 		//traverse
-		tree.traverse();
+		//tree.traverse();
+
+		//search for value.
+		int searchValue = 60;
+		System.out.println("Search for "+searchValue);
+		System.out.println(tree.findNode(searchValue).toString());
 	}
 	
 /*	@Test
