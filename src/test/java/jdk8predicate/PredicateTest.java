@@ -6,8 +6,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 @RunWith(JUnit4.class)
 public class PredicateTest {
@@ -35,5 +37,14 @@ public class PredicateTest {
         List<Person> result = personList.stream().filter(p -> startsWIthM.test(p.getName()))
                 .filter(p -> overAge25.test(p.getAge())).toList();
         assert (result.size() == 2);
+    }
+
+    @Test
+    public void test_commonElements(){
+        List<String> a = Arrays.asList("a","b","c");
+        List<String> b = Arrays.asList("a","b");
+
+        List<String> results = a.stream().filter(b::contains).collect(Collectors.toList());
+        System.out.println(results);
     }
 }

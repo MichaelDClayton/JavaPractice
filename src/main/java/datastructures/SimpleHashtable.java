@@ -10,6 +10,7 @@ public class SimpleHashtable {
 
     public void put(String key, SimpleEmployee employee) {
         int hashedKey = hashKey(key);
+        System.out.println("HashedKey: "+hashedKey);
         if (occupied(hashedKey)) {
             int stopIndex = hashedKey;
             if (hashedKey == hashtable.length - 1) {

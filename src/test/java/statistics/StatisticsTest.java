@@ -29,6 +29,8 @@ public class StatisticsTest {
         if(numbers.length % 2 == 0){
             int a = numbers[(numbers.length/2)-1];
             int b = numbers[(numbers.length/2)];
+            System.out.println("a: "+a);
+            System.out.println("b: "+b);
             median = (a+b)/2;
         }else {
             median = numbers[numbers.length/2];

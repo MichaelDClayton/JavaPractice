@@ -1,17 +1,15 @@
 package recursion;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class Factorial {
 
 	public static void main(String[] args) {
-		Queue<Integer> stack = new LinkedList<Integer>();
+		/*Queue<Integer> stack = new LinkedList<Integer>();
 		for(int i =0;i<5;i++) {
 			stack.add(i);
 		}
 		
-		System.out.println(stack);
+		System.out.println(stack);*/
+		System.out.println(factorial(5));
 	}
 	
 	

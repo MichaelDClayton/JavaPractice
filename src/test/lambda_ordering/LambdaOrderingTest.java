@@ -14,7 +14,7 @@ public class LambdaOrderingTest {
    @Test
     public void test_order_by_name() {
        List<Person> personList = SearchListOfObjects.createListOfObjects();
-       //System.out.println(personList);
+       System.out.println(personList);
        personList.sort((p1, p2) -> p2.getAge() - p1.getAge());
        System.out.println(personList);
        Assert.assertEquals(personList.getFirst().getAge(), 60);
