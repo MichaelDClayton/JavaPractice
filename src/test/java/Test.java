@@ -1,11 +1,12 @@
+import entity.Person;
+
 public class Test {
     public static void main(String[] args) {
-        char a = 'a';
-        int aAsInteger = a;
-        char b = 'b';
-        int bAsInteger = b;
-        System.out.println(aAsInteger);
-        System.out.println(bAsInteger);
+       Person p = new Person("Mike", 50);
+       Person p1 = new Person("Mike", 50);
+
+       System.out.println(p.hashCode());
+       System.out.println(p1.hashCode());
     }
 
 
