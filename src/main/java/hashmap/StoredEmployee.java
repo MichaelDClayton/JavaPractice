@@ -1,4 +1,4 @@
-package datastructures;
+package hashmap;
 
 public class StoredEmployee {
 

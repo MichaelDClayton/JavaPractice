@@ -1,5 +1,7 @@
 package jdk8consumer;
 
+import entity.Person;
+import entity.SearchListOfObjects;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -13,8 +15,11 @@ public class ConsumerTest {
 
     @Test
     public void test_SimpleConsumer() {
-        Consumer<String> printer = System.out::println;
+        Consumer<Object> printer = System.out::println;
         printer.accept("Mike");
+        printer.accept(23);
+        List<Person> personList = SearchListOfObjects.createListOfObjects();
+        printer.accept(personList.getFirst());
     }
 
     @Test

@@ -1,4 +1,4 @@
-package datastructures;
+package hashmap;
 
 public class RunSimplehashtable {
 
@@ -10,10 +10,21 @@ public class RunSimplehashtable {
         SimpleEmployee billEnd = new SimpleEmployee("Bill", "End", 78);
         SimpleEmployee janeJones2 = new SimpleEmployee("Jane2", "Jones2", 123);
 
-        datastructures.SimpleHashtable ht = new SimpleHashtable();
+        hashmap.SimpleHashtable ht = new SimpleHashtable();
         ht.put("Jones", janeJones);
         ht.put("Jones", janeJones2);
-        ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
+        ht.put("Jones", janeJones2);
         ht.put("Doe", johnDoe);
         ht.put("Wilson", mikeWilson);
         ht.put("Smith", marySmith);
@@ -25,10 +36,13 @@ public class RunSimplehashtable {
 
        // ht.remove("Wilson");
        // ht.remove("Jones");
-        ht.printHashtable();
+
 
         System.out.println("Retrieve key Smith: " + ht.get("Smith"));
+        System.out.println("HashTable Size: "+ht.size());
 
+        System.out.println("*************************");
+        ht.printHashtable();
 
 
     }

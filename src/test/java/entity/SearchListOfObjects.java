@@ -14,6 +14,7 @@ public class SearchListOfObjects {
         Person person2 = new Person("Suzy", 32);
         Person person3 = new Person("James", 34);
         Person person4 = new Person("Mike", 60);
+        Person person5 = new Person("Ike", 60);
 
         personList.add(person1);
         personList.add(person2);

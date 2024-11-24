@@ -1,16 +1,16 @@
-package datastructures;
+package hashmap;
 
 public class SimpleHashtable {
 
     private StoredEmployee[] hashtable;
-
+    private int size = 0;
     public SimpleHashtable() {
         hashtable = new StoredEmployee[10];
     }
 
     public void put(String key, SimpleEmployee employee) {
         int hashedKey = hashKey(key);
-        System.out.println("HashedKey: "+hashedKey);
+        System.out.println("put HashedKey: "+hashedKey + " key: "+key);
         if (occupied(hashedKey)) {
             int stopIndex = hashedKey;
             if (hashedKey == hashtable.length - 1) {
@@ -29,6 +29,7 @@ public class SimpleHashtable {
             System.out.println("Sorry, there's already an employee at position " + hashedKey);
         }
         else {
+            size++;
             hashtable[hashedKey] = new StoredEmployee(key, employee);
         }
     }
@@ -64,6 +65,7 @@ public class SimpleHashtable {
                 hashtable[hashedKey] != null &&
                 !hashtable[hashedKey].key.equals(key)) {
             hashedKey = (hashedKey + 1) % hashtable.length;
+            System.out.println("findKey hashedKey:"+hashedKey+" for findKey("+key+")");
         }
 
         if (stopIndex == hashedKey) {
@@ -88,6 +90,10 @@ public class SimpleHashtable {
                 System.out.println("Position " + i + ": " +hashtable[i].employee);
             }
         }
+    }
+
+    public int size(){
+        return size;
     }
 
 }

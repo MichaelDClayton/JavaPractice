@@ -11,7 +11,7 @@ import java.util.Set;
 @RunWith(JUnit4.class)
 public class TestHashcodeAndEquals {
     @Test
-    public void test_Objects_Equal(){
+    public void test_Objects_Equal() {
 
         Set<Shoe> shoeSet = new HashSet<>();
         Shoe shoe = new Shoe("Nike", "Black");
