@@ -20,7 +20,7 @@ public class CountdownLatchRunner{
 class CountdownLatchDemo implements Runnable{
 
 
-    private CountDownLatch latch;
+    private final CountDownLatch latch;
     private final String name;
     private final String dish;
     private final long cookingTime;
