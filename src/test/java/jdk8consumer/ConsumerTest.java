@@ -2,6 +2,7 @@ package jdk8consumer;
 
 import entity.Person;
 import entity.SearchListOfObjects;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -23,18 +24,31 @@ public class ConsumerTest {
     }
 
     @Test
-    public void test_ListConsumer(){
+    public void test_ListConsumer() {
         Consumer<List<Integer>> display = System.out::println;
-        Consumer<List<Integer>> collect = list->
+        Consumer<List<Integer>> collect = list ->
         {
             list.replaceAll(integer -> integer * 2);
         };
-        List<Integer> numbers = Arrays.asList(1,2,3,4);
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4);
         collect.accept(numbers);
         display.accept(numbers);
 
-        assert (numbers.getFirst()==2);
-        assert (numbers.getLast()==8);
-        
+        assert (numbers.getFirst() == 2);
+        assert (numbers.getLast() == 8);
+
+    }
+
+    @Test
+    public void test_Consumer_WithLongSyntax() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4);
+
+        Consumer<List<Integer>> consumer = new Consumer<List<Integer>>() {
+            @Override
+            public void accept(List<Integer> integers) {
+                Assert.assertEquals(4, numbers.size());
+            }
+        };
+        consumer.accept(numbers);
     }
 }

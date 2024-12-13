@@ -12,10 +12,10 @@ public class TestMapTo {
 
     @Test
     public void testConvertStringsToIntegers(){
-        String numberText = "1,2,3,4,5";
-        String[] parts = numberText.split(",");
-        int[] nums = Arrays.stream(parts).mapToInt(Integer::parseInt).toArray();
+
+        String[] strNums = {"1", "2", "3", "4", "5"};
+        int[] nums = Arrays.stream(strNums).mapToInt(Integer::parseInt).toArray();
         Assert.assertEquals(1, nums[0]);
-    }
+        }
 
 }
