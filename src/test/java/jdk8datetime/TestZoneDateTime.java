@@ -41,7 +41,6 @@ public class TestZoneDateTime {
         ZoneId tokyoZone = ZoneId.of("Asia/Tokyo");
         ZoneId nycZone = ZoneId.of("America/New_York");
 
-
         ZonedDateTime tokyoDateTime =
                 ZonedDateTime.of(LocalDateTime.now(), tokyoZone);
         ZonedDateTime nycDateTime =
