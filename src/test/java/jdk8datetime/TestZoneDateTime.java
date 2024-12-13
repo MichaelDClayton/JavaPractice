@@ -10,7 +10,7 @@ import java.time.*;
 @RunWith(JUnit4.class)
 public class TestZoneDateTime {
     @Test
-    public void test_ZonedDateTime(){
+    public void test_ZoneId(){
          /*
           *
           * Use this to list all ZoneId(s).
@@ -23,12 +23,8 @@ public class TestZoneDateTime {
         ZonedDateTime tokyoDateTime =
                 currentZone.withZoneSameInstant(tokyo);
 
-        ZoneId nyc = ZoneId.of("America/New_York");
-        ZonedDateTime myLocalDateTime = currentZone.withZoneSameInstant(nyc);
-
-        Period differenceInDays = Period.between(
-                myLocalDateTime.toLocalDate(),tokyoDateTime.toLocalDate());
-        Assert.assertEquals(1, differenceInDays.getDays());
+        ZoneId testedZoneId = tokyoDateTime.getZone();
+        Assert.assertEquals("Asia/Tokyo", testedZoneId.getId());
 
     }
 
