@@ -51,4 +51,14 @@ public class TestZoneDateTime {
        Assert.assertEquals(14, differenceInHours);
 
     }
+
+
+    @Test
+    public void test_Period(){
+        LocalDate start = LocalDate.of(2023, 12, 13);
+        LocalDate end = LocalDate.of(2024, 10, 23);
+        Period period = Period.between(start, end);
+        Assert.assertEquals(0, period.getYears());
+        Assert.assertEquals(10, period.getMonths());
+    }
 }
