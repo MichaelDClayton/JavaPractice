@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 
 
 @RunWith(JUnit4.class)
-public class DateWorkerTest extends TestCase {
+public class TestLocalDate extends TestCase {
 
     @Test
     public void test_LocalDate() {
@@ -23,7 +23,7 @@ public class DateWorkerTest extends TestCase {
     }
 
     @Test
-    public void test_LocalDateString() {
+    public void test_LocalDateWithDateFormatter() {
         LocalDate localDate = LocalDate.of(2024, 12, 13);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedDate = localDate.format(formatter);

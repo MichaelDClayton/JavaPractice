@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.time.Period;
 
 @RunWith(JUnit4.class)
-public class SpanAndDurationTest {
+public class TestSpanAndDuration {
     @Test
     public void test_getSpanBetweenLocalDates() {
         LocalDate localDateStart = LocalDate.of(2024, 7, 3);

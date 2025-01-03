@@ -14,7 +14,7 @@ public class TestNthLargestNumberInArray {
     public void test_NthLargestNumberInArray(){
         int[] nums = {3,2,1,6,4,5};
         int k = 2;
-        Arrays.sort(nums);
+        Arrays.sort(nums);//1,2,3,4,5,6
         int result = nums[nums.length - k];
         Assert.assertEquals(5, result);
     }
