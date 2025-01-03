@@ -16,7 +16,7 @@ public class TestReduceIntegerToSingleDigit {
 
     @Test
     public void test_ReduceIntegerToSingleDigit_Recursive(){
-        int result = ReduceIntegerToSingleDigit.reduceRecursion(123456723);
-        Assert.assertEquals(6, result);
+        int result = ReduceIntegerToSingleDigit.reduceRecursion(1256723);
+        Assert.assertEquals(8, result);
     }
 }
