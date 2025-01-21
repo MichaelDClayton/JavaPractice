@@ -23,7 +23,7 @@ public class ReduceTest {
     }
 
     @Test
-    public void test_StingReduce() {
+    public void test_StringReduce() {
         List<String> letters = Arrays.asList("A", "B", "C");
         String result = letters.stream().reduce("", String::concat);
         assertEquals("ABC", result);

@@ -21,10 +21,19 @@ public class ProducerConsumer {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-        });
+        }, "Consumer 1");
+
+        Thread consumer2 = new Thread(() -> {
+            try {
+                worker.consume();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }, "Consumer 2");
 
         producer.start();
         consumer.start();
+        consumer2.start();
     }
 
 

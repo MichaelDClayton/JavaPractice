@@ -15,7 +15,7 @@ public class BinaryTreeTest {
 		tree.addNode(6);
 
 		//traverse
-		//tree.traverse();
+		tree.traverse();
 
 		//search for value.
 		/*int searchValue = 60;

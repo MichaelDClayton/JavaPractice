@@ -10,7 +10,7 @@ public class SemaphoreDemo {
 
         Thread two = new Thread(new MyConsumer(semaphore, "Thread 2", 0));
         two.start();
-
+        System.out.println();
 
     }
 }

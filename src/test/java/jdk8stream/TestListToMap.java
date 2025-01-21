@@ -22,6 +22,5 @@ public class TestListToMap {
        Map<String, Person> map = personList.stream()
                .collect(Collectors.toMap(Person::getName, Function.identity()));
        Assert.assertNotNull(map.get("Mike"));
-
    }
 }
